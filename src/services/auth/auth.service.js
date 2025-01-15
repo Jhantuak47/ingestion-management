@@ -16,9 +16,7 @@ const registerUser = (request_body) => {
             const newUser = new User({ username, password: hashedPass, role, email });
             await newUser.save();
 
-            console.log({ newUser })
             const apiResponse = promiseReturnResult(true, { user: newUser }, "Successfully user created!");
-            console.log({ apiResponse });
             return resolve(apiResponse);
         } catch (error) {
             console.log(error);

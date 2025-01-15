@@ -18,7 +18,6 @@ exports.createDocument = async (request_data) => {
                 document_type: docType
             }
 
-            console.log({ documentUploadData });
             const persistedDocument = await userDocument.create(documentUploadData);
 
             const apiResponse = promiseReturnResult(true, persistedDocument, {}, "Success, File uploaded successfully");

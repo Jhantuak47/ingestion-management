@@ -1,4 +1,4 @@
-const Ingestion = require("../models/ingestionModel");
+const Ingestion = require("../../models/ingestionData.model");
 
 exports.createIngestion = async (data) => {
     const ingestion = new Ingestion(data);
